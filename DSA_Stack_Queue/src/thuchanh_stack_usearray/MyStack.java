@@ -12,7 +12,7 @@ public class MyStack {
         if (isFull()){
             throw new StackOverflowError("Stack is full");
         }
-        arr[index]=element;
+        arr[index++]=element;
     }
     public boolean isFull(){
         if (index==size){
@@ -24,10 +24,11 @@ public class MyStack {
         if (isEmpty()){
             throw new Exception("Stack is null");
         }
-        return arr[index--];
+        return arr[--index];
     }
     public boolean isEmpty(){
         if (index==0){
+
             return true;
         }
         return false;

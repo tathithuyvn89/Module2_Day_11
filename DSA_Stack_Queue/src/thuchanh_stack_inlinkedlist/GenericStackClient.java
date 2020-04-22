@@ -8,6 +8,7 @@ public class GenericStackClient {
         stack.push("Three");
         stack.push("Two");
         stack.push("One");
+
         System.out.println("1.1 of stack after push operation : " + stack.size());
         System.out.printf("1.2. Pop elements from stack: ");
         while (!stack.isEmty()) {

@@ -1,27 +1,27 @@
 package baitap_daonguocphantusonguyen_useStack;
 
-public class MyArray1  {
-    int arr[];
+public class WStack {
+    String arr[];
     private int size;
     private int index;
 
-    public MyArray1(int n){
+    public WStack(int n){
         this.size=n;
-        arr=new int[n];
+        arr=new String[n];
     }
-    public void push(int element ){
+    public void push(String element ){
         if (isFull()){
             throw new StackOverflowError("Stack is full");
         }
         arr[index++]=element;
     }
-    public int pop() throws Exception {
+    public String pop() throws Exception {
         if (isEmpty()){
             throw new Exception("Stack is null");
         }
         return arr[--index];
     }
-    public int getElement(int index){
+    public String getElement(int index){
         return arr[index];
     }
     public int size(){
@@ -43,3 +43,4 @@ public class MyArray1  {
 
 
 }
+
