@@ -95,7 +95,6 @@ public class CayNhiPhan <T extends Comparable> {
         return root.element;
     }
     public void delElement(T e){
-        System.out.println(root= deleteNode(root,e));
         root= deleteNode(root,e);
 
     }
@@ -107,9 +106,9 @@ public class CayNhiPhan <T extends Comparable> {
         } else {
 
             if (e.compareTo(root.element)>0){
-                deleteNode(root.right,e);
+                root.right= deleteNode(root.right,e);
             } else if (e.compareTo(root.element)<0){
-                deleteNode(root.left,e);
+                root.left=deleteNode(root.left,e);
             } else {
                 if (root.left==null){
                     return root.right;
@@ -118,11 +117,13 @@ public class CayNhiPhan <T extends Comparable> {
                 } else {
                     root.element=findMinLeft(root.right);
                     root.right=deleteNode(root.right,root.element);
+
                 }
             }
-        }
-        return root;
 
+        }
+
+        return root;
     }
 
 
